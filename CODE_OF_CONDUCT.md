@@ -1,4 +1,4 @@
-# Code of Conduct - Excelsia Game Engine
+# Code of Conduct - Randivity API
 
 ## Our Pledge
 

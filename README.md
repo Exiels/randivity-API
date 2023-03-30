@@ -1,8 +1,11 @@
-# NodeJS API CI/CD template
+<!-- Modify, make your own or use readme.so -->
+# Randivity API
 
-A Node.JS template for a simple API featuring CI/CD features
+The API for the randivity project.
 
-You can create a repository from this template, modifying after it some files to make sure it's working like intended.
+Randivity is a project to help you chose an activity randomly from a list for you and/or your friends.
+
+Randivity is available as an API, a Web Application, a Mobile Application and a Discord bot
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file. You can rename the .env.template to .env and modify it's values for your own API.
@@ -17,32 +20,7 @@ To run this project, you will need to add the following environment variables to
 Clone the project
 
 ```bash
-  git clone git@github.com:Exiels/NodeJS-API-CI-CD-template.git
-```
-
-Or use as template : https://github.com/Exiels/NodeJS-API-CI-CD-template/generate
-
-Go to the project directory
-
-```bash
-  cd NodeJS-API-CI-CD-template
-```
-
-Copy and overwrite/modify all files nedded in the infos folder
-
-Find all [TO_MODIFY] tags to help you modify all necessary informations
-```bash
-  LICENCE
-  README.md
-  .env.template => .env
-  SECURITY.md
-  CONTRIBUTING.md
-  CODE_OF_CONDUCT.md
-```
-
-Remove the infos folder
-```bash
-  rm -rf infos
+  git clone git@github.com:Exiels/randivity-API.git
 ```
 
 Init project
@@ -51,10 +29,10 @@ Init project
   npm init
 ```
 
-Install express dependence
+Install dependences
 
 ```bash
-  npm install express
+  npm install
 ```
 
 Start the server
@@ -74,20 +52,6 @@ Or Docker-Compose
 
 To deploy this project run
 
-Init project
-
-```bash
-  npm init
-```
-
-Install express dependence
-
-```bash
-  npm install express
-```
-
-Modify .env with envvars informations
-
 ```bash
   docker-compose up --build
 ```
@@ -95,9 +59,7 @@ Modify .env with envvars informations
 
 ## Features
 
-- Node.JS Express API
-- Continuous Integration with GitHub Actions
-- Continuous Development with Dockerfile and Docker-Compose
+[TO_MODIFY]
 
 ## Contributing
 
