@@ -7,11 +7,13 @@ jobs:
   StandardJS:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 12.x
-      - run: npm install standard
-        working-directory: /src
-      - run: standard --fix
-        working-directory: /src
+          node-version: 16
+      - name: Install standard
+        working-directory: ./src
+        run: npm install standard
+      - name: Standard Fix
+        working-directory: ./src
+        run: standard --fix
