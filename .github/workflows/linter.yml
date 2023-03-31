@@ -13,7 +13,7 @@ jobs:
           node-version: 16
       - name: Install standard
         working-directory: ./src
-        run: npm install standard
+        run: npm install -g standard
       - name: Standard Fix
         working-directory: ./src
         run: standard --fix
