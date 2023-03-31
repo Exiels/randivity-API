@@ -1,4 +1,0 @@
-  /home/exiel/Projects/Perso/randivity/Randivity/randivity-API/src/__tests__/launch.test.js:4:1: 'describe' is not defined. (no-undef)
-  /home/exiel/Projects/Perso/randivity/Randivity/randivity-API/src/__tests__/launch.test.js:7:3: 'beforeAll' is not defined. (no-undef)
-  /home/exiel/Projects/Perso/randivity/Randivity/randivity-API/src/__tests__/launch.test.js:11:3: 'describe' is not defined. (no-undef)
-  /home/exiel/Projects/Perso/randivity/Randivity/randivity-API/src/__tests__/launch.test.js:12:5: 'it' is not defined. (no-undef)
