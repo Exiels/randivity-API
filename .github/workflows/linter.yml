@@ -34,12 +34,15 @@ jobs:
         uses: andstor/file-existence-action@v1
         with:
           files: "./src/linter-nonfixable"
+      - name: Add comment start file
+        if: steps.check_files.outputs.files_exists == 'true'
+        working-directory: ./src
+        run: |
+          sed -i '1s/^/Non fixable linter problems:\n/' file
       - name: Comment non fixable
         if: steps.check_files.outputs.files_exists == 'true'
         uses: thollander/actions-comment-pull-request@v2
         with:
-          message: |
-            Non fixable linter problems:
           filePath: ./src/linter-nonfixable
           comment_tag: linternonfixable
       - uses: stefanzweifel/git-auto-commit-action@v4
