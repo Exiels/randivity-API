@@ -4,6 +4,9 @@
   "description": "Randivity-API is the API for the randivity project",
   "main": "index.js",
   "jest": {
+    "testPathIgnorePatterns": [
+      "__tests__/serverUtils"
+    ],
     "testEnvironment": "node"
   },
   "scripts": {
