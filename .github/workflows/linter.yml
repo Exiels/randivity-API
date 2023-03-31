@@ -20,3 +20,5 @@ jobs:
         working-directory: ./src
         run: standard --fix --global it --global expect --global describe --global beforeAll --global afterEach --global beforeEach --global afterAll
       - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[LINT] Applied linter fix"
