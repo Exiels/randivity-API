@@ -18,9 +18,11 @@ jobs:
         run: npm install -g standard
       - name: Standard Fix
         working-directory: ./src
+        continue-on-error: true
         run: standard --fix --global it --global expect --global describe --global beforeAll --global afterEach --global beforeEach --global afterAll
       - name: Get Non fixable auto
         working-directory: ./src
+        continue-on-error: true
         run: standard --global it --global expect --global describe --global beforeAll --global afterEach --global beforeEach --global afterAll > linter-nonfixable
       - name: Delete empty file linter-nonfixable
         working-directory: ./src
