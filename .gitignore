@@ -105,3 +105,6 @@ dist
 
 # Launch script
 launch.sh
+
+# Linter non fixable
+linter-nonfixable
