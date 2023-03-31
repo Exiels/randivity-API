@@ -16,4 +16,4 @@ jobs:
         run: npm install -g standard
       - name: Standard Fix
         working-directory: ./src
-        run: standard --fix
+        run: standard --fix --global it --global expect --global describe --global beforeAll --global afterEach --global beforeEach --global afterAll
