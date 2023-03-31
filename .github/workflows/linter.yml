@@ -1,0 +1,24 @@
+name: Linter
+on:
+  pull_request:
+        branches:
+            - main
+jobs:
+  StandardJS:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install standard
+        working-directory: ./src
+        run: npm install -g standard
+      - name: Standard Fix
+        working-directory: ./src
+        run: standard --fix --global it --global expect --global describe --global beforeAll --global afterEach --global beforeEach --global afterAll
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[LINT] Applied linter fix"
