@@ -41,7 +41,7 @@ jobs:
           message: |
             Non fixable linter problems:
           filePath: ./src/linter-nonfixable
-          comment-tag: linternonfixable
+          comment_tag: linternonfixable
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[LINT] Applied linter fix"
