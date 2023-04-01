@@ -13,6 +13,16 @@ jobs:
         name: Coverage report
         steps:
             - uses: actions/checkout@v3
+
+            - name: Start MongoDB
+              uses: supercharge/mongodb-github-action@1.8.0
+              with:
+                mongodb-version: 6.0
+                mongodb-username: ${{secrets.DB_USER}}
+                mongodb-password: ${{secrets.DB_PASS}}
+                mongodb-db: test
+                mongodb-port: ${{secrets.DB_PORT}}
+
             - uses: ArtiomTr/jest-coverage-report-action@v2
               with:
                 test-script: npm test

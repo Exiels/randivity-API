@@ -1,14 +1,19 @@
 const express = require('express')
 
 const router = require('../../routes/router')
+const { dbConnection } = require('./config/db')
 
-function testServer () {
-  const app = express()
-  app.use(express.json())
+async function testServer () {
+  const dbCo = await dbConnection('test')
 
-  app.use('/', router)
+  if (dbCo) {
+    const app = express()
+    app.use(express.json())
 
-  return app
+    app.use('/', router)
+
+    return app
+  }
 }
 
 exports.testServer = testServer

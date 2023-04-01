@@ -3,10 +3,9 @@ const server = require('./serverUtils/testServer')
 
 describe('Launch Routes', () => {
   let app
-  let tmp
 
   beforeAll(async () => {
-    app = server.testServer()
+    app = await server.testServer()
   })
 
   describe('Check if lauched', () => {
