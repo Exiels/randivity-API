@@ -30,9 +30,10 @@ jobs:
                 mongodb-db: test
                 mongodb-port: ${{secrets.DB_PORT}}
 
+            - name: Show env
+              run: env
+              
             - uses: ArtiomTr/jest-coverage-report-action@v2
               with:
                 test-script: npm test
                 working-directory: src/
-            - name: Show env
-              run: env 
