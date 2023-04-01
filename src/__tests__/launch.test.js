@@ -24,8 +24,8 @@ describe('Config tests', () => {
 
   describe('Check database connection', () => {
     it('Bad database connection', async () => {
-      process.env.DB_HOST = "Nope"
-      let val = await dbConnection('test')
+      process.env.DB_HOST = 'Nope'
+      const val = await dbConnection('test')
       expect(val).toBeFalsy()
     }, 31000)
   })
