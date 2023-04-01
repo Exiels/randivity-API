@@ -12,7 +12,11 @@ To run this project, you will need to add the following environment variables to
 
 `DB_PORT` example: `DB_PORT=27017`
 
-`EXPRESS_PORT` example: `EXPRESS_PORT=8080` 
+`EXPRESS_PORT` example: `EXPRESS_PORT=8080`
+
+`DB_USER` example: `DB_USER=root`
+
+`DB_PASS` example: `DB_PASS=nTIG9zN9h15V`
 
 
 ## Run Locally
