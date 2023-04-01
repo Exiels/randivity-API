@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const dbConfig = require('./db.config')
+const dbDefault = require('./db.default')
 
 // Database Connection
 
@@ -9,13 +10,15 @@ async function dbConnection (databaseName) {
   // We try to connect to the database
   try {
     console.log('INFO: Connection to database...')
-    console.log(host)
     // Set connection parameters
     mongoose.set('strictQuery', true)
     const connectionParams = dbConfig.getConfig(databaseName)
 
     await mongoose.connect(host, connectionParams)
     console.log('INFO: Connected to database.')
+
+    // Init default database informations
+    dbDefault()
 
     return true
   } catch (error) {

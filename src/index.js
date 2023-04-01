@@ -14,6 +14,7 @@ async function startServer () {
 
   if (dbCo) {
     try {
+      app.use(express.json())
       // Init router
       app.use('/', router)
 
