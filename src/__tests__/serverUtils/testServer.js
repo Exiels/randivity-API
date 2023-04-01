@@ -1,7 +1,7 @@
 const express = require('express')
 
 const router = require('../../routes/router')
-const { dbConnection } = require('./config/db')
+const { dbConnection } = require('../../config/db')
 
 async function testServer () {
   const dbCo = await dbConnection('test')
