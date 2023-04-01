@@ -3,6 +3,13 @@ on:
     pull_request:
         branches:
             - main
+
+env:
+    DB_USER: ${{secrets.DB_USER}}
+    DB_PASS: ${{secrets.DB_PASS}}
+    DB_PORT: ${{vars.DB_PORT}}
+    DB_HOST: ${{vars.DB_HOST}}
+
 jobs:
     Coverage:
         permissions:
@@ -22,18 +29,10 @@ jobs:
                 mongodb-password: ${{secrets.DB_PASS}}
                 mongodb-db: test
                 mongodb-port: ${{secrets.DB_PORT}}
-              env:
-                DB_USER: ${{secrets.DB_USER}}
-                DB_PASS: ${{secrets.DB_PASS}}
-                DB_PORT: ${{vars.DB_PORT}}
-                DB_HOST: ${{vars.DB_HOST}}
 
             - uses: ArtiomTr/jest-coverage-report-action@v2
               with:
                 test-script: npm test
                 working-directory: src/
-              env:
-                DB_USER: ${{secrets.DB_USER}}
-                DB_PASS: ${{secrets.DB_PASS}}
-                DB_PORT: ${{vars.DB_PORT}}
-                DB_HOST: ${{vars.DB_HOST}}
+            - name: Show env
+              run: env 
