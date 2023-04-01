@@ -5,6 +5,9 @@ services:
     restart: always
     ports:
       - '${DB_PORT}:${DB_PORT}'
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${DB_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${DB_PASS}
     volumes:
       - db:/var/lib/mongodb
 
@@ -19,6 +22,8 @@ services:
       - mongodb
     environment:
       - DB_HOST=mongodb
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
       - DB_PORT=${DB_PORT}
       - EXPRESS_PORT=${EXPRESS_PORT}
 
