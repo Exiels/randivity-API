@@ -25,7 +25,8 @@ jobs:
               env:
                 DB_USER: ${{secrets.DB_USER}}
                 DB_PASS: ${{secrets.DB_PASS}}
-                DB_PORT: ${{secrets.DB_PORT}}
+                DB_PORT: ${{env.DB_PORT}}
+                DB_HOST: ${{env.DB_HOST}}
 
             - uses: ArtiomTr/jest-coverage-report-action@v2
               with:
@@ -34,4 +35,5 @@ jobs:
               env:
                 DB_USER: ${{secrets.DB_USER}}
                 DB_PASS: ${{secrets.DB_PASS}}
-                DB_PORT: ${{secrets.DB_PORT}}
+                DB_PORT: ${{env.DB_PORT}}
+                DB_HOST: ${{env.DB_HOST}}
