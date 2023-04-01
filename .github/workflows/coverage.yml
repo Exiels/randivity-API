@@ -28,7 +28,7 @@ jobs:
                 mongodb-username: ${{secrets.DB_USER}}
                 mongodb-password: ${{secrets.DB_PASS}}
                 mongodb-db: test
-                mongodb-port: ${{secrets.DB_PORT}}
+                mongodb-port: ${{vars.DB_PORT}}
 
             - uses: ArtiomTr/jest-coverage-report-action@v2
               with:
