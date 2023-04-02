@@ -18,6 +18,7 @@ To run this project, you will need to add the following environment variables to
 
 `DB_PASS` example: `DB_PASS=nTIG9zN9h15V`
 
+`JWT_SECRET` example: `JWT_SECRET=Eg5i4189H0Y6`
 
 ## Run Locally
 

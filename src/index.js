@@ -1,9 +1,19 @@
 const express = require('express')
+const cors = require('cors')
+const RateLimit = require('express-rate-limit')
 
 const app = express()
 const port = process.env.EXPRESS_PORT
 const router = require('./routes/router.js')
 const { dbConnection } = require('./config/db')
+
+/**
+ * Set limiter
+ */
+const limiter = RateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 20
+})
 
 /**
  * Start the Node.Js server
@@ -14,6 +24,13 @@ async function startServer () {
 
   if (dbCo) {
     try {
+      app.use(express.json())
+      app.use(limiter)
+      app.use(cors({
+        credentials: true,
+        origin: '*',
+        allowedHeaders: '*'
+      }))
       // Init router
       app.use('/', router)
 
