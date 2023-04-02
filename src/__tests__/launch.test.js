@@ -24,7 +24,7 @@ describe('Config tests', () => {
   })
 
   describe('Check database connection', () => {
-    let tmp = process.env.DB_HOST
+    const tmp = process.env.DB_HOST
 
     it('Bad database connection', async () => {
       process.env.DB_HOST = 'Nope'
@@ -42,7 +42,6 @@ describe('Config tests', () => {
   })
 
   describe('Check database default users', () => {
-
     beforeAll(async () => {
       await dbConnection('test')
     })
@@ -53,7 +52,7 @@ describe('Config tests', () => {
     })
 
     it('admin exist', async () => {
-      const user = await Users.findOne({ username: 'admin'})
+      const user = await Users.findOne({ username: 'admin' })
 
       console.log(user)
       expect(user).toBeTruthy()
@@ -62,7 +61,7 @@ describe('Config tests', () => {
     })
 
     it('Random user not exist', async () => {
-      const user = await Users.findOne({ username: 'Nope'})
+      const user = await Users.findOne({ username: 'Nope' })
 
       console.log(user)
       expect(user).toBeFalsy()
