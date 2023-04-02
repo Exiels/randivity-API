@@ -4,7 +4,7 @@
  * @namespace code
  */
 
-const { Code } = require('../../models/code')
+const { Code } = require('../../../models/code')
 const randomstring = require('randomstring');
 
 

@@ -5,7 +5,7 @@ const auth = require('../../middleware/auth')
 const codeM = require('../../middleware/code')
 
 const code = require('./code/code')
-const codeGenerator = require('./codeGenerator')
+const codeGenerator = require('./code/codeGenerator')
 const codeChecker = require('./code/check')
 
 /**
