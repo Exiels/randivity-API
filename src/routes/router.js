@@ -5,6 +5,8 @@
 const express = require('express')
 const router = express.Router()
 
+const sanitizer = require('../middleware/sanitize')
+
 const loginRouter = require('./user/router')
 
 /**
@@ -12,6 +14,6 @@ const loginRouter = require('./user/router')
  * @namespace mainRouter
  */
 
-router.use('/user', loginRouter)
+router.use('/user', sanitizer, loginRouter)
 
 module.exports = router
