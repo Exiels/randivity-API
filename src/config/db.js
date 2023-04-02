@@ -18,7 +18,7 @@ async function dbConnection (databaseName) {
     console.log('INFO: Connected to database.')
 
     // Init default database informations
-    dbDefault()
+    await dbDefault()
 
     return true
   } catch (error) {
