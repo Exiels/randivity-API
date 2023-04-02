@@ -9,6 +9,7 @@ env:
     DB_PASS: ${{secrets.DB_PASS}}
     DB_PORT: ${{vars.DB_PORT}}
     DB_HOST: ${{vars.DB_HOST}}
+    JWT_SECRET: ${{secrets.JWT_SECRET}}
 
 jobs:
     Coverage:
