@@ -21,11 +21,11 @@ module.exports = async (req, res, next) => {
     const code = req.header('server-code')
 
     if (!code) {
-        return res.status(403).json({ message: 'Access Denied' })
+      return res.status(403).json({ message: 'Access Denied' })
     }
-    const codeCheck = await Code.findOne({ code: code})
+    const codeCheck = await Code.findOne({ code })
     if (codeCheck === undefined || codeCheck === null || codeCheck.length === 0) {
-        return res.status(400).json({ message: 'Invalid server code' })
+      return res.status(400).json({ message: 'Invalid server code' })
     }
     next()
   } catch (error) {
