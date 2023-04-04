@@ -1,9 +1,9 @@
 const request = require('supertest')
 const mongoose = require('mongoose')
 
-const server = require('../serverUtils/testServer')
-const dbDefault = require('../../config/db.default')
-const { Users } = require('../../models/user')
+const server = require('../../serverUtils/testServer')
+const dbDefault = require('../../../config/db.default')
+const { Users } = require('../../../models/user')
 
 describe('User route tests', () => {
   let app

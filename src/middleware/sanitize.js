@@ -18,6 +18,7 @@ const sanitize = require('mongo-sanitize')
 module.exports = (req, res, next) => {
   try {
     req.body = sanitize(req.body)
+    req.header = sanitize(req.header)
     next()
   } catch (error) {
     console.error(error)
