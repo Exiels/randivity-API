@@ -17,7 +17,7 @@ const codeChecker = require('./code/check')
 
 // Created router routes connection
 router.get('/code', auth, code)
-router.post('/generate', auth, codeGenerator)
+router.post('/code', auth, codeGenerator)
 router.get('/code/check', codeM, codeChecker)
 
 module.exports = router
