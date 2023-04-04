@@ -1,16 +1,14 @@
 /**
  * @memberof module:router~mainRouter~adminRouter
  * @inner
- * @namespace code
+ * @namespace check
  */
 
-const { Code } = require('../../../models/code')
-
 /**
- * Main code function
- * @name get /admin/code
+ * Main check function
+ * @name get /admin/code/check
  * @function
- * @memberof module:router~mainRouter~adminRouter~code
+ * @memberof module:router~mainRouter~adminRouter~check
  * @inner
  * @async
  * @param {Object} req

@@ -10,7 +10,7 @@ const randomstring = require('randomstring');
 
 /**
  * Main code function
- * @name get /admin/code
+ * @name post /admin/code
  * @function
  * @memberof module:router~mainRouter~adminRouter~code
  * @inner
