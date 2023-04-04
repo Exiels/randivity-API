@@ -6,7 +6,7 @@ const app = express()
 const port = process.env.EXPRESS_PORT
 const router = require('./routes/router.js')
 const { dbConnection } = require('./config/db')
-const sanitizer = require('../middleware/sanitize')
+const sanitizer = require('./middleware/sanitize')
 
 /**
  * Set limiter
