@@ -5,8 +5,7 @@
  */
 
 const { Code } = require('../../../models/code')
-const randomstring = require('randomstring');
-
+const randomstring = require('randomstring')
 
 /**
  * Main code function
@@ -23,9 +22,9 @@ const randomstring = require('randomstring');
 module.exports = async (req, res) => {
   try {
     const code = new Code({
-        code: randomstring.generate(7),
-        creationDate: Date.now(),
-        note: req.body.note || ''
+      code: randomstring.generate(7),
+      creationDate: Date.now(),
+      note: req.body.note || ''
     })
     await code.save()
 
