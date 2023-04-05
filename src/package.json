@@ -7,7 +7,15 @@
     "testPathIgnorePatterns": [
       "__tests__/serverUtils"
     ],
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "coverageThreshold": {
+      "global": {
+        "branches": 70,
+        "functions": 70,
+        "lines": 70,
+        "statements": 70
+      }
+    }
   },
   "scripts": {
     "test": "jest --runInBand --testTimeout=15000"

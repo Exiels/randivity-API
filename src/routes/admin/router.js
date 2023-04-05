@@ -9,7 +9,7 @@ const codeGenerator = require('./code/codeGenerator')
 const codeChecker = require('./code/check')
 
 /**
- * User router connection
+ * Admin router connection
  * @memberof module:router~mainRouter
  * @inner
  * @namespace adminRouter
