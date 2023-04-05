@@ -60,6 +60,7 @@ jobs:
         with:
           message: "Non fixable linter problems:"
           comment_tag: linternonfixable
+          create_if_not_exists: false
       
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:

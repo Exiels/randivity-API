@@ -7,7 +7,6 @@ const { Users } = require('../../../models/user')
 
 describe('User route tests', () => {
   let app
-  let test
 
   beforeAll(async () => {
     app = await server.testServer()
