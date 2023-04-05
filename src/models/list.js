@@ -29,10 +29,10 @@ const List = mongoose.model('list', listSchema)
 // We check if all required variables are here
 
 const validateList = (list) => {
-    const schema = Joi.object({
-      name: Joi.string().required()
-    })
-    return schema.validate(list)
-  }
+  const schema = Joi.object({
+    name: Joi.string().required()
+  })
+  return schema.validate(list)
+}
 
 module.exports = { List, validateList }

@@ -4,7 +4,7 @@
  * @namespace list
  */
 
-const { List, validateList } = require("../../models/list")
+const { List, validateList } = require('../../models/list')
 const mongoose = require('mongoose')
 
 /**
@@ -20,13 +20,13 @@ const mongoose = require('mongoose')
  * @returns 500 if Internal Server Error
  */
 exports.getLists = async (req, res) => {
-    try {
-        const lists = await List.find()
-      return res.status(200).json(lists)
-    } catch (error) {
-      console.error(error)
-      return res.status(500).json({ message: 'Internal Server Error' })
-    }
+  try {
+    const lists = await List.find()
+    return res.status(200).json(lists)
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ message: 'Internal Server Error' })
+  }
 }
 
 /**
@@ -42,21 +42,21 @@ exports.getLists = async (req, res) => {
  * @returns 500 if Internal Server Error
  */
 exports.postList = async (req, res) => {
-    try {
-        const { error } = validateList(req.body)
-        if (error) { return res.status(400).send(error.details[0].message)}
-        
-        const check = await List.findOne({ name: req.body.name })
-        if (check !== undefined && check !== null &&  check.length !== 0) {
-            return res.status(409).json({ message: 'List already Exist' })
-        }
-        const list = new List(req.body)
-        await list.save();
-        return res.status(201).json({ message: 'List created'})
-    } catch (error) {
-      console.error(error)
-      return res.status(500).json({ message: 'Internal Server Error' })
+  try {
+    const { error } = validateList(req.body)
+    if (error) { return res.status(400).send(error.details[0].message) }
+
+    const check = await List.findOne({ name: req.body.name })
+    if (check !== undefined && check !== null && check.length !== 0) {
+      return res.status(409).json({ message: 'List already Exist' })
     }
+    const list = new List(req.body)
+    await list.save()
+    return res.status(201).json({ message: 'List created' })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ message: 'Internal Server Error' })
+  }
 }
 
 /**
@@ -72,20 +72,18 @@ exports.postList = async (req, res) => {
  * @returns 500 if Internal Server Error
  */
 exports.deleteList = async (req, res) => {
-    try {
-        if(!mongoose.isValidObjectId(req.body.id)) {
-            return res.status(400).json({ message: 'Invalid id' })
-        }
-        const list = await List.findById(req.body.id)
-        if (list === undefined || list === null || list.length === 0)
-            return res.status(404).json({ message: 'List not found' })
-        else {
-            await List.findByIdAndRemove(req.body.id)
-        }
-    
-      return res.status(200).json({ message: 'List deleted' })
-    } catch (error) {
-      console.error(error)
-      return res.status(500).json({ message: 'Internal Server Error' })
+  try {
+    if (!mongoose.isValidObjectId(req.body.id)) {
+      return res.status(400).json({ message: 'Invalid id' })
     }
+    const list = await List.findById(req.body.id)
+    if (list === undefined || list === null || list.length === 0) { return res.status(404).json({ message: 'List not found' }) } else {
+      await List.findByIdAndRemove(req.body.id)
+    }
+
+    return res.status(200).json({ message: 'List deleted' })
+  } catch (error) {
+    console.error(error)
+    return res.status(500).json({ message: 'Internal Server Error' })
+  }
 }
