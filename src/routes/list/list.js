@@ -48,11 +48,11 @@ exports.postList = async (req, res) => {
         
         const check = await List.findOne({ name: req.body.name })
         if (check !== undefined && check !== null &&  check.length !== 0) {
-            return res.status(400).json({ message: 'List already Exist' })
+            return res.status(409).json({ message: 'List already Exist' })
         }
         const list = new List(req.body)
         await list.save();
-        return res.status(201).json({ message: 'OK'})
+        return res.status(201).json({ message: 'List created'})
     } catch (error) {
       console.error(error)
       return res.status(500).json({ message: 'Internal Server Error' })
@@ -83,7 +83,7 @@ exports.deleteList = async (req, res) => {
             await List.findByIdAndRemove(req.body.id)
         }
     
-      return res.status(200).json({ message: 'OK' })
+      return res.status(200).json({ message: 'List deleted' })
     } catch (error) {
       console.error(error)
       return res.status(500).json({ message: 'Internal Server Error' })
