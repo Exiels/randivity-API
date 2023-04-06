@@ -1,9 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const list = require('./list')
-const items = require('./items/router')
-
+const items = require('./items')
 /**
  * List router connection
  * @memberof module:router~mainRouter
@@ -12,10 +10,10 @@ const items = require('./items/router')
  */
 
 // Created router routes connection
-router.get('', list.getLists)
-router.post('', list.postList)
-router.delete('', list.deleteList)
-
-router.use('/items', items)
+router.get('', items.getItems)
+router.get('/all', items.getAllItems)
+router.post('', items.postItems)
+router.patch('', items.patchItems)
+router.delete('', items.deleteItems)
 
 module.exports = router
