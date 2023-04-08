@@ -4,8 +4,8 @@
  * @namespace rand
  */
 
-const { List, validateList } = require('../../../models/list')
-const { Items, validateItems } = require('../../../models/items')
+const { List } = require('../../../models/list')
+const { Items } = require('../../../models/items')
 const mongoose = require('mongoose')
 
 /**
