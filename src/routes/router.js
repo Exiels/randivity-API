@@ -8,6 +8,7 @@ const router = express.Router()
 const loginRouter = require('./user/router')
 const adminRouter = require('./admin/router')
 const listRouter = require('./list/router')
+const code = require('../middleware/code')
 
 /**
  * Main router connection
@@ -16,6 +17,6 @@ const listRouter = require('./list/router')
 
 router.use('/user', loginRouter)
 router.use('/admin', adminRouter)
-router.use('/list', listRouter)
+router.use('/list', code, listRouter)
 
 module.exports = router
