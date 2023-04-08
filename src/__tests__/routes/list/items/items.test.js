@@ -680,9 +680,6 @@ describe('items routes tests', () => {
         })
         .expect('Content-Type', /json/)
         .expect(200)
-        .then((response) => {
-          itemId = response.body[0]._id
-        })
 
       await request(app)
         .patch('/list/items')
@@ -866,9 +863,6 @@ describe('items routes tests', () => {
         })
         .expect('Content-Type', /json/)
         .expect(200)
-        .then((response) => {
-          itemId = response.body[0]._id
-        })
 
       await request(app)
         .delete('/list/items')
@@ -955,9 +949,6 @@ describe('items routes tests', () => {
         })
         .expect('Content-Type', /json/)
         .expect(200)
-        .then((response) => {
-          itemId = response.body[0]._id
-        })
 
       await request(app)
         .delete('/list/items')
