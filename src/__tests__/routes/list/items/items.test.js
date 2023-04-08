@@ -120,7 +120,6 @@ describe('items routes tests', () => {
     it('GET /items => Get list of items from a list invalid objectId', async () => {
       let code
       let key
-      let id
 
       await request(app)
         .post('/user/login')
@@ -158,7 +157,6 @@ describe('items routes tests', () => {
     it('GET /items => Get list of items from a list invalid listId', async () => {
       let code
       let key
-      let id
 
       await request(app)
         .post('/user/login')
@@ -196,7 +194,6 @@ describe('items routes tests', () => {
     it('GET /items => Get list of all items', async () => {
       let code
       let key
-      let id
 
       await request(app)
         .post('/user/login')
@@ -614,7 +611,6 @@ describe('items routes tests', () => {
       let code
       let key
       let id
-      let itemId
 
       await request(app)
         .post('/user/login')
@@ -801,7 +797,6 @@ describe('items routes tests', () => {
       let code
       let key
       let id
-      let itemId
 
       await request(app)
         .post('/user/login')
@@ -891,7 +886,6 @@ describe('items routes tests', () => {
       let code
       let key
       let id
-      let itemId
 
       await request(app)
         .post('/user/login')
