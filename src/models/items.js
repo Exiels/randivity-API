@@ -16,7 +16,7 @@ Joi.objectId = require('joi-objectid')(Joi)
 const itemsSchema = new Schema({
   name: {
     type: String,
-    required: true 
+    required: true
   },
   author: {
     type: String,

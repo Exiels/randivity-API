@@ -77,7 +77,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'listId': id
+          listId: id
         })
         .expect('Content-Type', /json/)
         .expect(200)
@@ -148,7 +148,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          'listId': 'test'
+          listId: 'test'
         })
         .expect('Content-Type', /json/)
         .expect(400)
@@ -185,7 +185,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          'listId': '642e290d175f702decad1910'
+          listId: '642e290d175f702decad1910'
         })
         .expect('Content-Type', /json/)
         .expect(400)
@@ -277,13 +277,13 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'listId': id,
-            "name": "testItem",
-            "author": "Exiel",
-            "description": "Test item as example",
-            "maxParticipants": 2,
-            "price": 2,
-            "address": "test address"
+          listId: id,
+          name: 'testItem',
+          author: 'Exiel',
+          description: 'Test item as example',
+          maxParticipants: 2,
+          price: 2,
+          address: 'test address'
         })
         .expect('Content-Type', /json/)
         .expect(201)
@@ -320,13 +320,13 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'listId': '642e290d175f702decad1910',
-            "name": "testItem",
-            "author": "Exiel",
-            "description": "Test item as example",
-            "maxParticipants": 2,
-            "price": 2,
-            "address": "test address"
+          listId: '642e290d175f702decad1910',
+          name: 'testItem',
+          author: 'Exiel',
+          description: 'Test item as example',
+          maxParticipants: 2,
+          price: 2,
+          address: 'test address'
         })
         .expect('Content-Type', /json/)
         .expect(400)
@@ -384,13 +384,13 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'listId': id,
-            "name": "testItem",
-            "author": "Exiel",
-            "description": "Test item as example",
-            "maxParticipants": 2,
-            "price": 2,
-            "address": "test address"
+          listId: id,
+          name: 'testItem',
+          author: 'Exiel',
+          description: 'Test item as example',
+          maxParticipants: 2,
+          price: 2,
+          address: 'test address'
         })
         .expect('Content-Type', /json/)
         .expect(201)
@@ -401,13 +401,13 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'listId': id,
-            "name": "testItem",
-            "author": "Exiel",
-            "description": "Test item as example",
-            "maxParticipants": 2,
-            "price": 2,
-            "address": "test address"
+          listId: id,
+          name: 'testItem',
+          author: 'Exiel',
+          description: 'Test item as example',
+          maxParticipants: 2,
+          price: 2,
+          address: 'test address'
         })
         .expect('Content-Type', /json/)
         .expect(409)
@@ -466,13 +466,13 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'listId': id,
-            "name": "testItem",
-            "author": "Exiel",
-            "description": "Test item as example",
-            "maxParticipants": 2,
-            "price": 2,
-            "address": "test address"
+          listId: id,
+          name: 'testItem',
+          author: 'Exiel',
+          description: 'Test item as example',
+          maxParticipants: 2,
+          price: 2,
+          address: 'test address'
         })
         .expect('Content-Type', /json/)
         .expect(201)
@@ -483,7 +483,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          'listId': id
+          listId: id
         })
         .expect('Content-Type', /json/)
         .expect(200)
@@ -497,14 +497,14 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'itemId': itemId,
-            'listId': id,
-            "name": "testItem",
-            "author": "Exiel",
-            "description": "Test item modified",
-            "maxParticipants": 2,
-            "price": 2,
-            "address": "test address"
+          itemId,
+          listId: id,
+          name: 'testItem',
+          author: 'Exiel',
+          description: 'Test item modified',
+          maxParticipants: 2,
+          price: 2,
+          address: 'test address'
         })
         .expect('Content-Type', /json/)
         .expect(200)
@@ -563,13 +563,13 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'listId': id,
-            "name": "testItem",
-            "author": "Exiel",
-            "description": "Test item as example",
-            "maxParticipants": 2,
-            "price": 2,
-            "address": "test address"
+          listId: id,
+          name: 'testItem',
+          author: 'Exiel',
+          description: 'Test item as example',
+          maxParticipants: 2,
+          price: 2,
+          address: 'test address'
         })
         .expect('Content-Type', /json/)
         .expect(201)
@@ -580,7 +580,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          'listId': id
+          listId: id
         })
         .expect('Content-Type', /json/)
         .expect(200)
@@ -594,14 +594,14 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'itemId': itemId,
-            'listId': '642e290d175f702decad1910',
-            "name": "testItem",
-            "author": "Exiel",
-            "description": "Test item modified",
-            "maxParticipants": 2,
-            "price": 2,
-            "address": "test address"
+          itemId,
+          listId: '642e290d175f702decad1910',
+          name: 'testItem',
+          author: 'Exiel',
+          description: 'Test item modified',
+          maxParticipants: 2,
+          price: 2,
+          address: 'test address'
         })
         .expect('Content-Type', /json/)
         .expect(400)
@@ -659,13 +659,13 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'listId': id,
-            "name": "testItem",
-            "author": "Exiel",
-            "description": "Test item as example",
-            "maxParticipants": 2,
-            "price": 2,
-            "address": "test address"
+          listId: id,
+          name: 'testItem',
+          author: 'Exiel',
+          description: 'Test item as example',
+          maxParticipants: 2,
+          price: 2,
+          address: 'test address'
         })
         .expect('Content-Type', /json/)
         .expect(201)
@@ -676,7 +676,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          'listId': id
+          listId: id
         })
         .expect('Content-Type', /json/)
         .expect(200)
@@ -690,14 +690,14 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'itemId': '642e290d175f702decad1910',
-            'listId': id,
-            "name": "testItem",
-            "author": "Exiel",
-            "description": "Test item modified",
-            "maxParticipants": 2,
-            "price": 2,
-            "address": "test address"
+          itemId: '642e290d175f702decad1910',
+          listId: id,
+          name: 'testItem',
+          author: 'Exiel',
+          description: 'Test item modified',
+          maxParticipants: 2,
+          price: 2,
+          address: 'test address'
         })
         .expect('Content-Type', /json/)
         .expect(400)
@@ -756,13 +756,13 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'listId': id,
-            "name": "testItem",
-            "author": "Exiel",
-            "description": "Test item as example",
-            "maxParticipants": 2,
-            "price": 2,
-            "address": "test address"
+          listId: id,
+          name: 'testItem',
+          author: 'Exiel',
+          description: 'Test item as example',
+          maxParticipants: 2,
+          price: 2,
+          address: 'test address'
         })
         .expect('Content-Type', /json/)
         .expect(201)
@@ -773,7 +773,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          'listId': id
+          listId: id
         })
         .expect('Content-Type', /json/)
         .expect(200)
@@ -787,7 +787,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'id': itemId
+          id: itemId
         })
         .expect('Content-Type', /json/)
         .expect(200)
@@ -845,13 +845,13 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'listId': id,
-            "name": "testItem",
-            "author": "Exiel",
-            "description": "Test item as example",
-            "maxParticipants": 2,
-            "price": 2,
-            "address": "test address"
+          listId: id,
+          name: 'testItem',
+          author: 'Exiel',
+          description: 'Test item as example',
+          maxParticipants: 2,
+          price: 2,
+          address: 'test address'
         })
         .expect('Content-Type', /json/)
         .expect(201)
@@ -862,7 +862,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          'listId': id
+          listId: id
         })
         .expect('Content-Type', /json/)
         .expect(200)
@@ -876,7 +876,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'id': 'test'
+          id: 'test'
         })
         .expect('Content-Type', /json/)
         .expect(400)
@@ -934,13 +934,13 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'listId': id,
-            "name": "testItem",
-            "author": "Exiel",
-            "description": "Test item as example",
-            "maxParticipants": 2,
-            "price": 2,
-            "address": "test address"
+          listId: id,
+          name: 'testItem',
+          author: 'Exiel',
+          description: 'Test item as example',
+          maxParticipants: 2,
+          price: 2,
+          address: 'test address'
         })
         .expect('Content-Type', /json/)
         .expect(201)
@@ -951,7 +951,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          'listId': id
+          listId: id
         })
         .expect('Content-Type', /json/)
         .expect(200)
@@ -965,7 +965,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-            'id': '642e290d175f702decad1910'
+          id: '642e290d175f702decad1910'
         })
         .expect('Content-Type', /json/)
         .expect(404)
