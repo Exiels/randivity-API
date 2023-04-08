@@ -195,7 +195,7 @@ exports.deleteItems = async (req, res) => {
 
     const item = await Items.findById(req.body.id)
     if (item === undefined || item === null || item.length === 0) {
-        return res.status(404).json({ message: 'List not found' }) }
+        return res.status(404).json({ message: 'Item not found' }) }
     else {
         await Items.findByIdAndRemove(req.body.id)
         const lists = await List.find()
