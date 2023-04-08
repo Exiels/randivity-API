@@ -23,7 +23,7 @@ const mongoose = require('mongoose')
 module.exports = async (req, res) => {
   try {
     if (!mongoose.isValidObjectId(req.body.id)) {
-        return res.status(400).json({ message: 'Invalid listId' })
+      return res.status(400).json({ message: 'Invalid listId' })
     }
     const list = await List.findById(req.body.id)
     if (list === undefined || list === null || list.length === 0) {
