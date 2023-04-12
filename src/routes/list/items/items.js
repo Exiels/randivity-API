@@ -23,16 +23,16 @@ const mongoose = require('mongoose')
 exports.getItems = async (req, res) => {
   try {
     const data = []
-    const listId = req.body.listId
+    const listId = req.body.id
     if (!listId) {
-      return res.status(400).json({ message: 'Missing listId' })
+      return res.status(400).json({ message: 'Missing id' })
     }
     if (!mongoose.isValidObjectId(listId)) {
-      return res.status(400).json({ message: 'Invalid listId' })
+      return res.status(400).json({ message: 'Invalid id' })
     }
     const list = await List.findById(listId)
     if (list === undefined || list === null || list.length === 0) {
-      return res.status(400).json({ message: 'Invalid listId' })
+      return res.status(400).json({ message: 'Invalid id' })
     }
     const items = list.items
     for (const element of items) {
@@ -96,7 +96,7 @@ exports.postItems = async (req, res) => {
 
     const list = await List.findById(req.body.listId)
     if (list === undefined || list === null || list.length === 0) {
-      return res.status(400).json({ message: 'Invalid listId' })
+      return res.status(400).json({ message: 'Invalid id' })
     }
 
     const itemCheck = await Items.findOne({ name: req.body.name })
