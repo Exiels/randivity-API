@@ -9,7 +9,7 @@ const { dbConnection } = require('./config/db')
 const sanitizer = require('./middleware/sanitize')
 const swaggerUi = require('swagger-ui-express')
 const YAML = require('yamljs')
-const swaggerDocument = YAML.load('./swagger.yaml');
+const swaggerDocument = YAML.load('./swagger.yaml')
 
 /**
  * Set limiter
@@ -36,7 +36,7 @@ async function startServer () {
         allowedHeaders: '*'
       }))
       // Init swagger
-      app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+      app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
       // Init router
       app.use('/', sanitizer, router)
 
