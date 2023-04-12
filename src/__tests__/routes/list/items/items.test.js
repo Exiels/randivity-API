@@ -77,7 +77,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          listId: id
+          id
         })
         .expect('Content-Type', /json/)
         .expect(200)
@@ -148,7 +148,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          listId: 'test'
+          id: 'test'
         })
         .expect('Content-Type', /json/)
         .expect(400)
@@ -185,7 +185,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          listId: '642e290d175f702decad1910'
+          id: '642e290d175f702decad1910'
         })
         .expect('Content-Type', /json/)
         .expect(400)
@@ -483,7 +483,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          listId: id
+          id
         })
         .expect('Content-Type', /json/)
         .expect(200)
@@ -580,7 +580,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          listId: id
+          id
         })
         .expect('Content-Type', /json/)
         .expect(200)
@@ -676,7 +676,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          listId: id
+          id
         })
         .expect('Content-Type', /json/)
         .expect(200)
@@ -770,7 +770,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          listId: id
+          id
         })
         .expect('Content-Type', /json/)
         .expect(200)
@@ -859,7 +859,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          listId: id
+          id
         })
         .expect('Content-Type', /json/)
         .expect(200)
@@ -945,7 +945,7 @@ describe('items routes tests', () => {
           'server-code': code
         })
         .send({
-          listId: id
+          id
         })
         .expect('Content-Type', /json/)
         .expect(200)

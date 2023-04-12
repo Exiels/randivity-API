@@ -7,6 +7,9 @@ const port = process.env.EXPRESS_PORT
 const router = require('./routes/router.js')
 const { dbConnection } = require('./config/db')
 const sanitizer = require('./middleware/sanitize')
+const swaggerUi = require('swagger-ui-express')
+const YAML = require('yamljs')
+const swaggerDocument = YAML.load('./swagger.yaml')
 
 /**
  * Set limiter
@@ -32,6 +35,8 @@ async function startServer () {
         origin: '*',
         allowedHeaders: '*'
       }))
+      // Init swagger
+      app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
       // Init router
       app.use('/', sanitizer, router)
 
