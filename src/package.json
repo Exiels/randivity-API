@@ -47,7 +47,7 @@
     "joi-objectid": "^4.0.2",
     "jsonwebtoken": "^9.0.0",
     "mongo-sanitize": "^1.1.0",
-    "mongoose": "^7.0.3",
+    "mongoose": "^7.0.4",
     "randomstring": "^1.2.3",
     "standard": "^17.0.0",
     "supertest": "^6.3.3",
